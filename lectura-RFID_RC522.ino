@@ -13,7 +13,7 @@ void setup() {
 	Serial.begin(9600); //Iniciamos la comunicación  serial
 	SPI.begin();        //Iniciamos el Bus SPI
 	mfrc522.PCD_Init(); // Iniciamos  el MFRC522
-	Serial.println("Lectura del UID");
+	Serial.println("----Lectura del UID----");
 }
 
 void loop() {
@@ -21,7 +21,7 @@ void loop() {
   
 	if ( mfrc522.PICC_IsNewCardPresent()) 
         {  
-          Serial.print("hola");
+          Serial.print("lectura");
   		//Seleccionamos una tarjeta
             if ( mfrc522.PICC_ReadCardSerial()) 
             {
